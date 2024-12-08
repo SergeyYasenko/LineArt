@@ -3,6 +3,11 @@
 @use "mixins" as *;
 @use "fonts" as *;
 
+html {
+  scroll-behavior: smooth;
+  background-color: $bgColorLight;
+}
+
 body {
   @include mediumInter;
   font-size: rem(16px);

@@ -1,10 +1,11 @@
 <template>
   <div class="main">
     <div class="main__container">
-      <MainSlide />
+      <MainSlider />
       <MainAdvantages />
       <MainCategories />
       <MainOffset />
+      <MainCatalog />
     </div>
   </div>
 </template>

@@ -1,20 +1,20 @@
 <template>
-  <div class="MainSlide">
-    <div class="MainSlide__container">
+  <div class="MainSlider">
+    <div class="MainSlider__container">
       <ClientOnly>
         <Swiper
-          class="MainSlide__slider-container"
+          class="MainSlider__slider-container"
           @swiper="onSwiper"
           @slideChange="onSlideChange"
           :modules="modules"
-          :slides-per-view="1.25"
+          :slides-per-view="1.26"
           :space-between="30"
           :loop="true"
           :centered-slides="true"
           :pagination="{ clickable: true }"
           :navigation="{
-            nextEl: '.MainSlide__button-next',
-            prevEl: '.MainSlide__button-prev',
+            nextEl: '.MainSlider__button-next',
+            prevEl: '.MainSlider__button-prev',
           }"
           :a11y="{
             prevSlideMessage: 'Предыдущий слайд',
@@ -22,37 +22,37 @@
           }"
         >
           <SwiperSlide
-            class="MainSlide__slider-slide"
+            class="MainSlider__slider-slide"
             v-for="(slide, idx) in slides"
             :key="slide.id"
             :style="{ 'background-image': `url(${slide.img})` }"
           >
-            <div class="MainSlide__slider-content">
-              <h1 class="MainSlide__title-block" v-if="slide.title">
-                <span class="MainSlide__title" v-html="slide.title"></span>
+            <section class="MainSlider__slider-content">
+              <h1 class="MainSlider__title-block" v-if="slide.title">
+                <span class="MainSlider__title" v-html="slide.title"></span>
               </h1>
-              <p class="MainSlide__text" v-if="slide.subtitle">
+              <p class="MainSlider__text" v-if="slide.subtitle">
                 <span v-html="slide.subtitle"></span>
               </p>
-            </div>
+            </section>
           </SwiperSlide>
         </Swiper>
         <button
           type="button"
-          class="swiper-button-prev MainSlide__button MainSlide__button-prev"
+          class="swiper-button-prev MainSlider__button MainSlider__button-prev"
         >
-          <span class="MainSlide__button-icon-block">
-            <IconArrow class="MainSlide__button-icon" />
+          <span class="MainSlider__button-icon-block">
+            <IconArrow class="MainSlider__button-icon" />
           </span>
-          <span class="MainSlide__button-text"> Алюминиевые полки </span>
+          <p class="MainSlider__button-text">Алюминиевые полки</p>
         </button>
         <button
           type="button"
-          class="swiper-button-next MainSlide__button MainSlide__button-next"
+          class="swiper-button-next MainSlider__button MainSlider__button-next"
         >
-          <span class="MainSlide__button-text"> Алюминиевые полки </span>
-          <span class="MainSlide__button-icon-block">
-            <IconArrow class="MainSlide__button-icon" />
+          <p class="MainSlider__button-text">Алюминиевые полки</p>
+          <span class="MainSlider__button-icon-block">
+            <IconArrow class="MainSlider__button-icon" />
           </span>
         </button>
       </ClientOnly>
@@ -68,7 +68,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import images from "assets/img/Main/MainSlide/heroSectionSlide-1.jpg";
+import images from "assets/img/Main/MainSlider/heroSectionSlide-1.jpg";
 
 export interface Slide {
   id: number;
@@ -136,7 +136,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.MainSlide__slider-container {
+.MainSlider__slider-container {
   height: calc(100vh - 166px);
   position: relative;
   display: flex;
@@ -148,7 +148,7 @@ export default defineComponent({
   margin-bottom: 80px;
 }
 
-.MainSlide__slider-slide {
+.MainSlider__slider-slide {
   width: auto;
   display: flex;
   justify-content: center;
@@ -159,13 +159,13 @@ export default defineComponent({
   transition: transform 0.3s ease;
 }
 
-.MainSlide__slider-slide {
+.MainSlider__slider-slide {
   background-color: rgba(41, 41, 45, 0.8);
   background-blend-mode: overlay;
   @include transition(all, 0.5s, ease-in-out);
 }
 
-.MainSlide__slider-slide.swiper-slide-active {
+.MainSlider__slider-slide.swiper-slide-active {
   opacity: 1;
   transform: scale(1);
   background-color: rgba(41, 41, 41, 0.3);
@@ -184,42 +184,42 @@ export default defineComponent({
   background-color: #ffffff;
 }
 
-.MainSlide__button-prev::after,
-.MainSlide__button-next::after {
+.MainSlider__button-prev::after,
+.MainSlider__button-next::after {
   display: none !important;
 }
 
-.MainSlide__button-prev,
-.MainSlide__button-next {
+.MainSlider__button-prev,
+.MainSlider__button-next {
   top: auto;
   color: $fontColorLight;
   width: auto;
   height: auto;
 }
 
-.MainSlide__button-prev {
+.MainSlider__button-prev {
   bottom: 70px;
   left: 15%;
 }
 
-.MainSlide__button-next {
+.MainSlider__button-next {
   bottom: 70px;
   right: 15%;
 }
 
-.MainSlide__button-prev .MainSlide__button-icon-block {
+.MainSlider__button-prev .MainSlider__button-icon-block {
   margin-right: 24px;
 }
 
-.MainSlide__button-next .MainSlide__button-icon-block {
+.MainSlider__button-next .MainSlider__button-icon-block {
   margin-left: 24px;
 }
 
-.MainSlide__button-next .MainSlide__button-icon {
+.MainSlider__button-next .MainSlider__button-icon {
   transform: rotate(180deg);
 }
 
-.MainSlide__button-icon-block {
+.MainSlider__button-icon-block {
   min-width: 70px;
   height: 70px;
   display: flex;
@@ -229,7 +229,7 @@ export default defineComponent({
   border: 1px solid $fontColorLight;
 }
 
-.MainSlide__button-text {
+.MainSlider__button-text {
   max-width: 116px;
   text-align: left;
   @include regularInter;
@@ -237,26 +237,27 @@ export default defineComponent({
   line-height: 19px;
 }
 
-.MainSlide__button-icon {
+.MainSlider__button-icon {
   max-width: 42px;
   max-height: 42px;
 }
 
-.MainSlide__slider-content {
+.MainSlider__slider-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-height: 100%;
   backdrop-filter: blur(6.400000095367432px);
   padding-left: 36px;
   padding-right: 36px;
 }
 
-.MainSlide__title-block {
+.MainSlider__title-block {
   width: 600px;
 }
 
-.MainSlide__title {
+.MainSlider__title {
   @include heading(100px, 100px, $fontColorLight, "bold");
   display: flex;
   flex-direction: column;
@@ -264,15 +265,15 @@ export default defineComponent({
   margin-bottom: 52px;
 }
 
-.MainSlide__title span:first-child {
+.MainSlider__title span:first-child {
   text-align: start;
 }
 
-.MainSlide__title span:last-child {
+.MainSlider__title span:last-child {
   text-align: end;
 }
 
-.MainSlide__text {
+.MainSlider__text {
   @include regularInter;
   font-size: rem(16px);
   line-height: 24px;

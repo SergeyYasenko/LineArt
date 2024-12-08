@@ -1,18 +1,18 @@
 <template>
-  <div class="MainCategories" v-if="mainCategory">
+  <section class="MainCategories" v-if="mainCategory">
     <div class="MainCategories__container container">
       <div class="MainCategories__text-wrapper">
         <div class="MainCategories__text-block">
-          <div class="MainCategories__title-block" v-if="mainCategory.title">
+          <h2 class="MainCategories__title-block" v-if="mainCategory.title">
             <span
               class="MainCategories__title"
               v-html="mainCategory.title"
             ></span>
-          </div>
+          </h2>
           <div class="MainCategories__text-nav-wrapper">
-            <div class="MainCategories__text" v-if="mainCategory.text">
+            <h3 class="MainCategories__text" v-if="mainCategory.text">
               <span v-html="mainCategory.text"></span>
-            </div>
+            </h3>
             <div class="MainCategories__slider-button-block">
               <button
                 type="button"
@@ -71,7 +71,7 @@
                 >
                   <div class="MainCategories__slider-content">
                     <div class="MainCategories__slider-wrapper">
-                      <h1
+                      <h3
                         class="MainCategories__slide-title-block"
                         v-if="slide.title"
                       >
@@ -79,7 +79,7 @@
                           class="MainCategories__slide-title"
                           v-html="slide.title"
                         ></span>
-                      </h1>
+                      </h3>
                       <div class="MainCategories__slide-button-block">
                         <IconArrow class="MainCategories__slide-button" />
                       </div>
@@ -92,7 +92,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

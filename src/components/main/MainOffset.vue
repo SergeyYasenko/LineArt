@@ -1,14 +1,14 @@
 <template>
-  <div class="MainOffset">
+  <section class="MainOffset">
     <div class="MainOffset__container container">
       <NuxtLink to="/" class="MainOffset__block MainOffset__block--left">
-        <div class="MainOffset__title">Акции</div>
+        <h3 class="MainOffset__title">Акции</h3>
       </NuxtLink>
       <NuxtLink to="/" class="MainOffset__block MainOffset__block--right">
-        <div class="MainOffset__title">Новинки</div>
+        <h3 class="MainOffset__title">Новинки</h3>
       </NuxtLink>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts"></script>
@@ -21,6 +21,7 @@
   overflow: hidden;
   border-radius: 16px;
   height: 460px;
+  margin-bottom: 80px;
 }
 
 .MainOffset__block {
