@@ -224,6 +224,7 @@ const mainCategory = ref<MainCategories>({
 
 .MainCategories__slider-button-block {
   display: flex;
+  align-items: center;
 }
 
 .MainCategories__slider-button {
@@ -323,22 +324,5 @@ const mainCategory = ref<MainCategories>({
   font-size: rem(20px);
   line-height: 22px;
   color: $fontColorLight;
-}
-
-.MainCategories__slide-button-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.MainCategories__slide-button {
-  width: 21px;
-  height: 21px;
-  color: $fontColorLight;
-  transform: rotate(180deg);
 }
 </style>
