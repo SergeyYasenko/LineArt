@@ -1,9 +1,9 @@
 <template>
-  <div class="HeroSection">
-    <div class="HeroSection__container">
+  <div class="MainSlide">
+    <div class="MainSlide__container">
       <ClientOnly>
         <Swiper
-          class="HeroSection__slider-container"
+          class="MainSlide__slider-container"
           @swiper="onSwiper"
           @slideChange="onSlideChange"
           :modules="modules"
@@ -13,8 +13,8 @@
           :centered-slides="true"
           :pagination="{ clickable: true }"
           :navigation="{
-            nextEl: '.HeroSection__button-next',
-            prevEl: '.HeroSection__button-prev',
+            nextEl: '.MainSlide__button-next',
+            prevEl: '.MainSlide__button-prev',
           }"
           :a11y="{
             prevSlideMessage: 'Предыдущий слайд',
@@ -22,16 +22,16 @@
           }"
         >
           <SwiperSlide
-            class="HeroSection__slider-slide"
+            class="MainSlide__slider-slide"
             v-for="(slide, idx) in slides"
             :key="slide.id"
             :style="{ 'background-image': `url(${slide.img})` }"
           >
-            <div class="HeroSection__slider-content">
-              <h1 class="HeroSection__title-block" v-if="slide.title">
-                <span class="HeroSection__title" v-html="slide.title"></span>
+            <div class="MainSlide__slider-content">
+              <h1 class="MainSlide__title-block" v-if="slide.title">
+                <span class="MainSlide__title" v-html="slide.title"></span>
               </h1>
-              <p class="HeroSection__text" v-if="slide.subtitle">
+              <p class="MainSlide__text" v-if="slide.subtitle">
                 <span v-html="slide.subtitle"></span>
               </p>
             </div>
@@ -39,20 +39,20 @@
         </Swiper>
         <button
           type="button"
-          class="swiper-button-prev HeroSection__button HeroSection__button-prev"
+          class="swiper-button-prev MainSlide__button MainSlide__button-prev"
         >
-          <span class="HeroSection__button-icon-block">
-            <IconArrow class="HeroSection__button-icon" />
+          <span class="MainSlide__button-icon-block">
+            <IconArrow class="MainSlide__button-icon" />
           </span>
-          <span class="HeroSection__button-text"> Алюминиевые полки </span>
+          <span class="MainSlide__button-text"> Алюминиевые полки </span>
         </button>
         <button
           type="button"
-          class="swiper-button-next HeroSection__button HeroSection__button-next"
+          class="swiper-button-next MainSlide__button MainSlide__button-next"
         >
-          <span class="HeroSection__button-text"> Алюминиевые полки </span>
-          <span class="HeroSection__button-icon-block">
-            <IconArrow class="HeroSection__button-icon" />
+          <span class="MainSlide__button-text"> Алюминиевые полки </span>
+          <span class="MainSlide__button-icon-block">
+            <IconArrow class="MainSlide__button-icon" />
           </span>
         </button>
       </ClientOnly>
@@ -68,7 +68,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import images from "assets/img/Main/HeroSection/heroSectionSlide-1.jpg";
+import images from "assets/img/Main/MainSlide/heroSectionSlide-1.jpg";
 
 export interface Slide {
   id: number;
@@ -136,7 +136,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.HeroSection__slider-container {
+.MainSlide__slider-container {
   height: calc(100vh - 166px);
   position: relative;
   display: flex;
@@ -148,7 +148,7 @@ export default defineComponent({
   margin-bottom: 80px;
 }
 
-.HeroSection__slider-slide {
+.MainSlide__slider-slide {
   width: auto;
   display: flex;
   justify-content: center;
@@ -159,13 +159,13 @@ export default defineComponent({
   transition: transform 0.3s ease;
 }
 
-.HeroSection__slider-slide {
+.MainSlide__slider-slide {
   background-color: rgba(41, 41, 45, 0.8);
   background-blend-mode: overlay;
   @include transition(all, 0.5s, ease-in-out);
 }
 
-.HeroSection__slider-slide.swiper-slide-active {
+.MainSlide__slider-slide.swiper-slide-active {
   opacity: 1;
   transform: scale(1);
   background-color: rgba(41, 41, 41, 0.3);
@@ -184,42 +184,42 @@ export default defineComponent({
   background-color: #ffffff;
 }
 
-.HeroSection__button-prev::after,
-.HeroSection__button-next::after {
+.MainSlide__button-prev::after,
+.MainSlide__button-next::after {
   display: none !important;
 }
 
-.HeroSection__button-prev,
-.HeroSection__button-next {
+.MainSlide__button-prev,
+.MainSlide__button-next {
   top: auto;
   color: $fontColorLight;
   width: auto;
   height: auto;
 }
 
-.HeroSection__button-prev {
+.MainSlide__button-prev {
   bottom: 70px;
   left: 15%;
 }
 
-.HeroSection__button-next {
+.MainSlide__button-next {
   bottom: 70px;
   right: 15%;
 }
 
-.HeroSection__button-prev .HeroSection__button-icon-block {
+.MainSlide__button-prev .MainSlide__button-icon-block {
   margin-right: 24px;
 }
 
-.HeroSection__button-next .HeroSection__button-icon-block {
+.MainSlide__button-next .MainSlide__button-icon-block {
   margin-left: 24px;
 }
 
-.HeroSection__button-next .HeroSection__button-icon {
+.MainSlide__button-next .MainSlide__button-icon {
   transform: rotate(180deg);
 }
 
-.HeroSection__button-icon-block {
+.MainSlide__button-icon-block {
   min-width: 70px;
   height: 70px;
   display: flex;
@@ -229,7 +229,7 @@ export default defineComponent({
   border: 1px solid $fontColorLight;
 }
 
-.HeroSection__button-text {
+.MainSlide__button-text {
   max-width: 116px;
   text-align: left;
   @include regularInter;
@@ -237,12 +237,12 @@ export default defineComponent({
   line-height: 19px;
 }
 
-.HeroSection__button-icon {
+.MainSlide__button-icon {
   max-width: 42px;
   max-height: 42px;
 }
 
-.HeroSection__slider-content {
+.MainSlide__slider-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -252,11 +252,11 @@ export default defineComponent({
   padding-right: 36px;
 }
 
-.HeroSection__title-block {
+.MainSlide__title-block {
   width: 600px;
 }
 
-.HeroSection__title {
+.MainSlide__title {
   @include heading(100px, 100px, $fontColorLight, "bold");
   display: flex;
   flex-direction: column;
@@ -264,15 +264,15 @@ export default defineComponent({
   margin-bottom: 52px;
 }
 
-.HeroSection__title span:first-child {
+.MainSlide__title span:first-child {
   text-align: start;
 }
 
-.HeroSection__title span:last-child {
+.MainSlide__title span:last-child {
   text-align: end;
 }
 
-.HeroSection__text {
+.MainSlide__text {
   @include regularInter;
   font-size: rem(16px);
   line-height: 24px;

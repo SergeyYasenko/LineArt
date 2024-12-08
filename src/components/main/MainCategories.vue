@@ -310,6 +310,7 @@ const mainCategory = ref<MainCategories>({
   backdrop-filter: blur(6.400000095367432px);
   width: 100%;
   padding: 20px;
+  border-radius: 0 0 18px 18px;
 }
 
 .MainCategories__slide-title-block {

@@ -1,9 +1,10 @@
 <template>
   <div class="main">
     <div class="main__container">
-      <HeroSection />
+      <MainSlide />
       <MainAdvantages />
       <MainCategories />
+      <MainOffset />
     </div>
   </div>
 </template>
