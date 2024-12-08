@@ -1,0 +1,37 @@
+@use "fonts" as *;
+@use "vars" as *;
+@use 'sass:math';
+
+$rem-base: 16px;
+
+@function rem($value) {
+	@return math.div($value, $rem-base) * 1rem;
+}
+
+// Transition: добавляет плавные переходы
+@mixin transition($style: all, $duration: 0.3s, $timing: ease-in-out) {
+	transition: #{$style} #{$duration} #{$timing};
+}
+
+// Пример использования:
+// @include transition(opacity, 0.3s, ease-out);
+// или просто: @include transition;
+
+@mixin heading($font-size, $line-height, $color: $fontColor, $font-weight) {
+	font-size: rem($font-size);
+	line-height: $line-height;
+	font-style: italic;
+	color: $color;
+
+	@if $font-weight == 'bold' {
+		@include boldMontserrat;
+	} @else if $font-weight == 'semi-bold' {
+		@include semiBoldMontserrat;
+	} @else if $font-weight == 'medium' {
+		@include mediumMontserrat;
+	} @else if $font-weight == 'regular' {
+		@include regularMontserrat;
+	} @else {
+		@warn "Unknown font-weight: #{$font-weight}";
+	}
+}

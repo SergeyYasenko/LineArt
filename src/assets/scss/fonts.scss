@@ -1,0 +1,52 @@
+// Montserrat
+$boldMontserrat: 'Montserrat', Arial, sans-serif;
+$semiBoldMontserrat: 'Montserrat', Arial, sans-serif;
+$mediumMontserrat: 'Montserrat', Arial, sans-serif;
+$regularMontserrat: 'Montserrat', Arial, sans-serif;
+
+// Inter
+$boldInter: 'Inter', Helvetica, Arial, sans-serif;
+$semiBoldInter: 'Inter', Helvetica, Arial, sans-serif;
+$mediumInter: 'Inter', Helvetica, Arial, sans-serif;
+$regularInter: 'Inter', Helvetica, Arial, sans-serif;
+
+// Миксины для быстрого использования
+@mixin boldMontserrat {
+	font-family: $boldMontserrat;
+	font-weight: 700;
+}
+
+@mixin semiBoldMontserrat {
+	font-family: $semiBoldMontserrat;
+	font-weight: 600;
+}
+
+@mixin mediumMontserrat {
+	font-family: $mediumMontserrat;
+	font-weight: 500;
+}
+
+@mixin regularMontserrat {
+	font-family: $regularMontserrat;
+	font-weight: 400;
+}
+
+@mixin boldInter {
+	font-family: $boldInter;
+	font-weight: 700;
+}
+
+@mixin semiBoldInter {
+	font-family: $semiBoldInter;
+	font-weight: 600;
+}
+
+@mixin mediumInter {
+	font-family: $mediumInter;
+	font-weight: 500;
+}
+
+@mixin regularInter {
+	font-family: $regularInter;
+	font-weight: 400;
+}
