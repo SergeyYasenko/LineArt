@@ -227,7 +227,8 @@ const mainCategory = ref<MainCategories>({
   align-items: center;
 }
 
-.MainCategories__slider-button {
+.MainCategories__slider-button.swiper-button-next,
+.MainCategories__slider-button.swiper-button-prev {
   width: 70px;
   height: 70px;
   border-radius: 50%;
