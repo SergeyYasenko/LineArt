@@ -1,5 +1,5 @@
 <template>
-  <section class="MainAdvantages" v-if="cards">
+  <div class="MainAdvantages" v-if="cards">
     <div class="MainAdvantages__container container">
       <div class="MainAdvantages__card" v-for="card in cards" :key="card.id">
         <div class="MainAdvantages__card-background" v-if="card.background">
@@ -10,7 +10,7 @@
         </p>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

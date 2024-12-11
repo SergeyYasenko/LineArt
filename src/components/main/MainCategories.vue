@@ -71,7 +71,7 @@
                 >
                   <div class="MainCategories__slider-content">
                     <div class="MainCategories__slider-wrapper">
-                      <h3
+                      <p
                         class="MainCategories__slide-title-block"
                         v-if="slide.title"
                       >
@@ -79,7 +79,7 @@
                           class="MainCategories__slide-title"
                           v-html="slide.title"
                         ></span>
-                      </h3>
+                      </p>
                       <div class="MainCategories__slide-button-block">
                         <IconArrow class="MainCategories__slide-button" />
                       </div>
@@ -281,14 +281,14 @@ const mainCategory = ref<MainCategories>({
   min-height: 350px;
   height: auto;
   border-radius: 18px;
-  @include transition(background-size, 0.3s, ease-in-out);
+  @include transition(background-size, 0.5s, ease-out);
   background-color: rgba(41, 41, 41, 0.3);
   background-blend-mode: multiply;
 }
 
 .MainCategories__slider-slide:hover {
   background-size: 110%;
-  @include transition(background-size, 0.3s, ease-in-out);
+  @include transition(background-size, 0.5s, ease-out);
 }
 
 .MainCategories__slider-content-block {
@@ -325,5 +325,22 @@ const mainCategory = ref<MainCategories>({
   font-size: rem(20px);
   line-height: 22px;
   color: $fontColorLight;
+}
+
+.MainCategories__slide-button-block {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MainCategories__slide-button {
+  width: 21px;
+  height: 21px;
+  color: $fontColorLight;
+  transform: rotate(180deg);
 }
 </style>

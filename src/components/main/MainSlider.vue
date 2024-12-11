@@ -1,5 +1,5 @@
 <template>
-  <div class="MainSlider">
+  <section class="MainSlider">
     <div class="MainSlider__container">
       <ClientOnly>
         <Swiper
@@ -27,14 +27,14 @@
             :key="slide.id"
             :style="{ 'background-image': `url(${slide.img})` }"
           >
-            <section class="MainSlider__slider-content">
+            <div class="MainSlider__slider-content">
               <h1 class="MainSlider__title-block" v-if="slide.title">
                 <span class="MainSlider__title" v-html="slide.title"></span>
               </h1>
               <p class="MainSlider__text" v-if="slide.subtitle">
                 <span v-html="slide.subtitle"></span>
               </p>
-            </section>
+            </div>
           </SwiperSlide>
         </Swiper>
         <button
@@ -57,7 +57,7 @@
         </button>
       </ClientOnly>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
