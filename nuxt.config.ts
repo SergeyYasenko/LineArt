@@ -46,8 +46,7 @@ export default defineNuxtConfig({
             { charset: "utf-8" },
             {
                name: "viewport",
-               content:
-                  "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, interactive-widget=resizes-content, minimal-ui",
+               content: "width=device-width, initial-scale=1",
             },
          ],
          link: [{ rel: "icon", type: "image/x-ico", href: "/favicon.ico" }],
