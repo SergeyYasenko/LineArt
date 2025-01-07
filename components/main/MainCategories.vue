@@ -105,9 +105,9 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { A11y, Navigation, Pagination } from "swiper/modules";
-import slideImg1 from "@/assets/img/Main/MainCategories/MainCategories-img1.jpg";
-import slideImg2 from "@/assets/img/Main/MainCategories/MainCategories-img2.jpg";
-import slideImg3 from "@/assets/img/Main/MainCategories/MainCategories-img3.jpg";
+import slideImg1 from "~~/assets/img/Main/MainCategories/MainCategories-img1.jpg";
+import slideImg2 from "~~/assets/img/Main/MainCategories/MainCategories-img2.jpg";
+import slideImg3 from "~~/assets/img/Main/MainCategories/MainCategories-img3.jpg";
 
 const onSwiperCategories = () => {};
 

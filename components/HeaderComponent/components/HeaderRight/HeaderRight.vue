@@ -1,11 +1,11 @@
 <template>
   <div class="HeaderRight">
-    <div class="HeaderRight__container">
-      <CallbackBlock class="HeaderRight__Callback-block" />
-      <CatalogMenu
-        class="HeaderRight__catalog-menu"
-        ariaLabel="Правое меню пользователя"
-        :items="[
+	<div class="HeaderRight__container">
+	  <CallbackBlock class="HeaderRight__Callback-block" />
+	  <CatalogMenu
+	  class="HeaderRight__catalog-menu"
+	  ariaLabel="Правое меню пользователя"
+	  :items="[
           {
             id: 1,
             name: 'Сравнить',
@@ -35,13 +35,18 @@
             showIconFirst: true,
           },
         ]"
-      />
-    </div>
+	  />
+	</div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { IconArrows, IconAuth, IconCart, IconHeart } from "#components";
+import CallbackBlock from "~/components/HeaderComponent/components/HeaderRight/components/CallbackBlock.vue";
+import CatalogMenu from "~/components/ui/CatalogMenu.vue";
+import IconArrows from "assets/icons/IconArrow.vue";
+import IconAuth from "assets/icons/IconAuth.vue";
+import IconCart from "assets/icons/IconCart.vue";
+import IconHeart from "assets/icons/IconHeart.vue";
 </script>
 
 <style lang="scss">

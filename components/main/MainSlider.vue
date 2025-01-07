@@ -23,7 +23,7 @@
             >
                <SwiperSlide
                   class="MainSlider__slider-slide"
-                  v-for="(slide, idx) in props.data"
+                  v-for="(slide) in props.data"
                   :key="slide.id"
                   :style="{ 'background-image': `url(${slide.img})` }"
                >

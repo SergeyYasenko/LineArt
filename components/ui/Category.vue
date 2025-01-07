@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import type { Category } from "~/types/products";
+import type { Category } from "~~/types/products";
 
 // Типизация переменной categories
 const categories = ref<Category[]>([]);

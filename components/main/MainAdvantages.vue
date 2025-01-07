@@ -14,10 +14,10 @@
 </template>
 
 <script setup lang="ts">
-import background1 from "@/assets/img/Main/MainAdvantages/cart-tick.png";
-import background2 from "@/assets/img/Main/MainAdvantages/chart-up.png";
-import background3 from "@/assets/img/Main/MainAdvantages/ruble.png";
-import background4 from "@/assets/img/Main/MainAdvantages/home-4.png";
+import background1 from "~~/assets/img/Main/MainAdvantages/cart-tick.png";
+import background2 from "~~/assets/img/Main/MainAdvantages/chart-up.png";
+import background3 from "~~/assets/img/Main/MainAdvantages/ruble.png";
+import background4 from "~~/assets/img/Main/MainAdvantages/home-4.png";
 
 export interface MainCard {
    id: number;

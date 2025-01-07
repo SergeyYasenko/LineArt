@@ -45,6 +45,7 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+console.log(props)
 
 const showIconFirst = (item: MenuItem): boolean => {
   return item.showIconFirst ?? false;

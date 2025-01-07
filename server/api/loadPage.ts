@@ -1,5 +1,5 @@
 import { defineEventHandler } from "h3";
-import jsonData from "../../assets/PagesApi/MainPage/loadPage.json";
+import jsonData from "~~/assets/PagesApi/MainPage/loadPage.json";
 
 export default defineEventHandler(() => {
    jsonData.content.slider.forEach((slide) => {

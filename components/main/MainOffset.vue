@@ -1,10 +1,10 @@
 <template>
   <section class="MainOffset">
     <div class="MainOffset__container container">
-      <NuxtLink to="/" class="MainOffset__block MainOffset__block--left">
+      <NuxtLink to="/public" class="MainOffset__block MainOffset__block--left">
         <h3 class="MainOffset__title">Акции</h3>
       </NuxtLink>
-      <NuxtLink to="/" class="MainOffset__block MainOffset__block--right">
+      <NuxtLink to="/public" class="MainOffset__block MainOffset__block--right">
         <h3 class="MainOffset__title">Новинки</h3>
       </NuxtLink>
     </div>
@@ -42,7 +42,7 @@
 
 .MainOffset__block--left {
   left: 0;
-  background-image: url("@/assets/img/Main/MainOffset/MainOffset-img2.jpg");
+  background-image: url("../../assets/img/Main/MainOffset/MainOffset-img2.jpg");
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
   width: 55%;
 }
@@ -50,7 +50,7 @@
 /* Правый блок */
 .MainOffset__block--right {
   right: 0;
-  background-image: url("@/assets/img/Main/MainOffset/MainOffset-img1.jpg");
+  background-image: url("../../assets/img/Main/MainOffset/MainOffset-img1.jpg");
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
   width: 55%;
 }
